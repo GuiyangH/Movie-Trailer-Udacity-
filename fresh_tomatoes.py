@@ -6,7 +6,7 @@ import re
 main_page_head = '''
 <head>
     <meta charset="utf-8">
-    <title>Fresh Tomatoes!</title>
+    <title>King Jason!</title>
 
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -16,6 +16,7 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            background-color:black;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -31,6 +32,16 @@ main_page_head = '''
         #trailer-video {
             width: 100%;
             height: 100%;
+        }
+        #searchbox
+        {
+                border-width:1px;
+                border-style: solid;
+                width:300px;
+                height:45px;
+                padding:10px;
+                left-margin:300px;
+                overflow:hidden;
         }
         .movie-tile {
             margin-bottom: 20px;
@@ -87,6 +98,8 @@ main_page_content = '''
 <!DOCTYPE html>
 <html lang="en">
   <body>
+    <!-- Embed a music that autoplays -->
+    <embed src="Beautiful_Wonderful_Life.wav" autostart="true" loop="false" width="2" height="0">
     <!-- Trailer Video Modal -->
     <div class="modal" id="trailer">
       <div class="modal-dialog">
@@ -105,13 +118,17 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a class="navbar-brand" href="#">Selected Jason Statham Movie Trailers</a>
           </div>
+          <form id="searchbox" action="http://www.google.com">
+              <input id="search" type="text" placeholder="Wanna Google Statham?">
+              <input id="submit" type="submit" value="Search">
+          </form>
         </div>
       </div>
     </div>
     <div class="container">
-      {movie_tiles}
+      <font size='6' color='red'>{movie_tiles}</b>
     </div>
   </body>
 </html>

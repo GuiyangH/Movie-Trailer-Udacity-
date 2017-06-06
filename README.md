@@ -1,4 +1,5 @@
 # Movie-Trailer-Udacity-
+The project is to create a movie trailer website that contains the image of the movies, the titles and links to the youtube trailers. 
 ## Get started:
 Run the entertainment_center.py file to see the html page.
 
